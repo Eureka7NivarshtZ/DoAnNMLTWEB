@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GIF Detail – GifFinder</title>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" />
   </head>
@@ -13,7 +13,7 @@
     <div class="Navbar">
       <div class="Navbar-left">
         <a href="/" class="Navbar-logo">
-          <img src="/image/download.png" class="logo" />
+          <img src="image/download.png" class="logo" />
         </a>
       </div>
       <div class="Navbar-center">
@@ -26,8 +26,8 @@
       <div class="Navbar-right">
         <button id="themeToggle" class="ThemeToggle">🌙</button>
         <div class="loginlogout-container">
-          <a href="/signin.html" class="Navbar-signin">Sign In</a>
-          <a href="/signup.html" class="Navbar-signup">Sign Up</a>
+          <a href="signin.html" class="Navbar-signin">Sign In</a>
+          <a href="signup.html" class="Navbar-signup">Sign Up</a>
         </div>
       </div>
     </div>
@@ -127,7 +127,7 @@
       <div class="footer-content">
         <p>© 2026 GifFinder · Explore endless GIFs</p>
         <div class="footer-contact">
-          <a href="/contact.html">Liên hệ</a>
+          <a href="contact.html">Liên hệ</a>
           <a href="mailto:support@giffinder.com">support@giffinder.com</a>
           <a href="#">Discord</a>
         </div>
@@ -170,7 +170,7 @@
     async function loadGif() {
       let gif = null;
       try {
-        const res = await fetch("/gif.json");
+        const res = await fetch("./gif.json");
         const all = await res.json();
         if (gifId) {
           gif = all.find(g => String(g.id) === gifId) || all[0];

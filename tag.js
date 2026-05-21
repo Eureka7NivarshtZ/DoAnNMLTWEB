@@ -2,22 +2,21 @@ document.addEventListener("DOMContentLoaded", async () => {
   const params = new URLSearchParams(window.location.search);
   const selectedTag = params.get("tag");
 
-  const res = await fetch("/gif.json");
+  const res = await fetch("./gif.json");
   const gifs = await res.json();
 
-  const filtered = gifs.filter(gif =>
-    gif.tags.includes(selectedTag)
+  const filtered = gifs.filter((gif) => gif.tags.includes(selectedTag));
+
+  document.getElementById("tagTitle").textContent = selectedTag.replace(
+    "-",
+    " ",
   );
 
-  document.getElementById("tagTitle").textContent =
-    selectedTag.replace("-", " ");
-
-  document.getElementById("tagCount").textContent =
-    `${filtered.length} POSTS`;
+  document.getElementById("tagCount").textContent = `${filtered.length} POSTS`;
 
   const grid = document.getElementById("gifGrid");
 
-  filtered.forEach(gif => {
+  filtered.forEach((gif) => {
     const card = document.createElement("div");
     card.className = "GifCard";
 
@@ -26,7 +25,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       <div class="GifCard-body">
         <div class="GifCard-title">${gif.title}</div>
         <div class="GifCard-tags">
-          ${gif.tags.map(tag => `<span class="GifCard-tag">#${tag}</span>`).join("")}
+          ${gif.tags.map((tag) => `<span class="GifCard-tag">#${tag}</span>`).join("")}
         </div>
       </div>
     `;

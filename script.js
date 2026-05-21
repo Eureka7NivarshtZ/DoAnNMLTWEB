@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   let allGifs = [];
   async function init() {
-    const res = await fetch("/gif.json");
+    const res = await fetch("./gif.json");
     allGifs = await res.json();
     currentSort = "trending";
     sortAndRender();

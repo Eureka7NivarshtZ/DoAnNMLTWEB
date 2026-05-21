@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       card.addEventListener("click", (e) => {
         // Don't navigate if clicking the copy button
         if (e.target.closest(".GifCard-action")) return;
-        window.location.href = `/gif-detail.html?id=${gif.id}`;
+        window.location.href = `gif-detail.html?id=${gif.id}`;
       });
 
       grid.appendChild(card);

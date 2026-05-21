@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tag Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+      <div class="Navbar">
+        <div class="Navbar-left">
+          <a href="/" class="Navbar-logo">
+            <img src="/image/download.png" class="logo" />
+          </a>
+        </div>
+        <div class="Navbar-center">
+          <div class="Searchbar">
+            <form action="" class="Searchbar-form">
+              <input
+                type="text"
+                class="inputSearch"
+                name="q"
+                placeholder="Tìm kiếm tag,ten gif...."
+              />
+            </form>
+          </div>
+        </div>
+        <div class="Navbar-right">
+          <div class="loginlogout-container">
+            <a href="/signin.html" class="Navbar-signin">Sign In</a>
+            <a href="/signup.html" class="Navbar-signup">Sign Up</a>
+          </div>
+        </div>
+      </div>
+  <div class="TagPageHero">
+    <div class="TagHero-overlay">
+      <h1 id="tagTitle">Tag Name</h1>
+      <p id="tagDesc">Explore GIFs in this category</p>
+      <span id="tagCount">0 POSTS</span>
+    </div>
+  </div>
+
+  <div class="MainContainer">
+    <div class="GifGrid" id="gifGrid"></div>
+  </div>
+
+  <script src="tag.js"></script>
+</body>
+</html>

@@ -1,0 +1,443 @@
+[
+  {
+    "id": 1,
+    "title": "Funny Cat",
+    "url": "https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif",
+    "tags": ["funny", "cat", "animals"],
+    "likes": 4200,
+    "views": 128000
+  },
+  {
+    "id": 2,
+    "title": "Mind Blown",
+    "url": "https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif",
+    "tags": ["reaction", "mind-blown"],
+    "likes": 3100,
+    "views": 98000
+  },
+  {
+    "id": 3,
+    "title": "Dancing Penguin",
+    "url": "https://media.giphy.com/media/11sBLVxNs7v6WA/giphy.gif",
+    "tags": ["dance", "penguin", "funny"],
+    "likes": 5800,
+    "views": 210000
+  },
+  {
+    "id": 4,
+    "title": "Happy Dog",
+    "url": "https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif",
+    "tags": ["dog", "happy", "animals"],
+    "likes": 2900,
+    "views": 87000
+  },
+  {
+    "id": 5,
+    "title": "Facepalm",
+    "url": "https://media.giphy.com/media/XsUtdIeJ0MWMo/giphy.gif",
+    "tags": ["reaction", "facepalm"],
+    "likes": 6700,
+    "views": 320000
+  },
+  {
+    "id": 6,
+    "title": "Thumbs Up",
+    "url": "https://media.giphy.com/media/111ebonMs90YLu/giphy.gif",
+    "tags": ["reaction", "approve"],
+    "likes": 3300,
+    "views": 102000
+  },
+  {
+    "id": 7,
+    "title": "Spongebob Mocking",
+    "url": "https://media.giphy.com/media/nDSlfqf0gn5g4/giphy.gif",
+    "tags": ["spongebob", "meme", "funny"],
+    "likes": 9100,
+    "views": 450000
+  },
+  {
+    "id": 8,
+    "title": "This Is Fine",
+    "url": "https://media.giphy.com/media/QMHoU66sBXqqLqYvGO/giphy.gif",
+    "tags": ["meme", "fire", "fine"],
+    "likes": 8400,
+    "views": 390000
+  },
+  {
+    "id": 9,
+    "title": "Clapping",
+    "url": "https://media.giphy.com/media/3o6Ztij8ZRXF2jXdRe/giphy.gif",
+    "tags": ["clap", "reaction", "applause"],
+    "likes": 2200,
+    "views": 75000
+  },
+  {
+    "id": 10,
+    "title": "Laughing Baby",
+    "url": "https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif",
+    "tags": ["funny", "baby", "laugh"],
+    "likes": 4100,
+    "views": 132000
+  },
+  {
+    "id": 11,
+    "title": "Excited Jump",
+    "url": "https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif",
+    "tags": ["happy", "reaction", "jump"],
+    "likes": 3900,
+    "views": 110000
+  },
+  {
+    "id": 12,
+    "title": "Cute Panda",
+    "url": "https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif",
+    "tags": ["cute", "panda", "animals"],
+    "likes": 7200,
+    "views": 250000
+  },
+  {
+    "id": 13,
+    "title": "Anime Wow",
+    "url": "https://media.giphy.com/media/l4FGuhL4U2WyjdkaY/giphy.gif",
+    "tags": ["anime", "wow", "reaction"],
+    "likes": 4800,
+    "views": 144000
+  },
+  {
+    "id": 14,
+    "title": "Dog Running",
+    "url": "https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif",
+    "tags": ["dog", "animals", "funny"],
+    "likes": 5600,
+    "views": 186000
+  },
+  {
+    "id": 15,
+    "title": "Sad Cat",
+    "url": "https://media.giphy.com/media/mlvseq9yvZhba/giphy.gif",
+    "tags": ["cat", "sad", "reaction"],
+    "likes": 6100,
+    "views": 201000
+  },
+  {
+    "id": 16,
+    "title": "OMG Reaction",
+    "url": "https://media.giphy.com/media/5VKbvrjxpVJCM/giphy.gif",
+    "tags": ["reaction", "omg", "meme"],
+    "likes": 5300,
+    "views": 170000
+  },
+  {
+    "id": 17,
+    "title": "Kpop Dance",
+    "url": "https://media.giphy.com/media/3ohs4BSacFKI7A717y/giphy.gif",
+    "tags": ["dance", "kpop", "nmixx"],
+    "likes": 6900,
+    "views": 280000
+  },
+  {
+    "id": 18,
+    "title": "Vintage Camera",
+    "url": "https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif",
+    "tags": ["vintage", "camera", "retro"],
+    "likes": 2800,
+    "views": 84000
+  },
+  {
+    "id": 19,
+    "title": "Hello Wave",
+    "url": "https://media.giphy.com/media/ASd0Ukj0y3qMM/giphy.gif",
+    "tags": ["hello", "wave", "greeting"],
+    "likes": 3500,
+    "views": 97000
+  },
+  {
+    "id": 20,
+    "title": "Attention Please",
+    "url": "https://media.giphy.com/media/xUPGcguWZHRC2HyBRS/giphy.gif",
+    "tags": ["attention", "meme"],
+    "likes": 3100,
+    "views": 90000
+  },
+  {
+    "id": 21,
+    "title": "Cat Typing",
+    "url": "https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif",
+    "tags": ["cat", "funny", "work"],
+    "likes": 4300,
+    "views": 126000
+  },
+  {
+    "id": 22,
+    "title": "Shocked Face",
+    "url": "https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif",
+    "tags": ["reaction", "shock"],
+    "likes": 5100,
+    "views": 173000
+  },
+  {
+    "id": 23,
+    "title": "Dancing Cat",
+    "url": "https://media.giphy.com/media/11sBLVxNs7v6WA/giphy.gif",
+    "tags": ["dance", "cat", "funny"],
+    "likes": 6200,
+    "views": 220000
+  },
+  {
+    "id": 24,
+    "title": "Sleepy Dog",
+    "url": "https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif",
+    "tags": ["dog", "sleep", "cute"],
+    "likes": 3700,
+    "views": 112000
+  },
+  {
+    "id": 25,
+    "title": "No Way",
+    "url": "https://media.giphy.com/media/XsUtdIeJ0MWMo/giphy.gif",
+    "tags": ["reaction", "no"],
+    "likes": 5900,
+    "views": 230000
+  },
+  {
+    "id": 26,
+    "title": "Victory Clap",
+    "url": "https://media.giphy.com/media/111ebonMs90YLu/giphy.gif",
+    "tags": ["clap", "approve"],
+    "likes": 3300,
+    "views": 92000
+  },
+  {
+    "id": 27,
+    "title": "Mocking Face",
+    "url": "https://media.giphy.com/media/nDSlfqf0gn5g4/giphy.gif",
+    "tags": ["meme", "funny"],
+    "likes": 8500,
+    "views": 390000
+  },
+  {
+    "id": 28,
+    "title": "Burning Room",
+    "url": "https://media.giphy.com/media/QMHoU66sBXqqLqYvGO/giphy.gif",
+    "tags": ["fire", "meme"],
+    "likes": 7700,
+    "views": 342000
+  },
+  {
+    "id": 29,
+    "title": "Standing Ovation",
+    "url": "https://media.giphy.com/media/3o6Ztij8ZRXF2jXdRe/giphy.gif",
+    "tags": ["clap", "applause"],
+    "likes": 2900,
+    "views": 81000
+  },
+
+  {
+    "id": 30,
+    "title": "Happy Hamster",
+    "url": "https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif",
+    "tags": ["cute", "animals"],
+    "likes": 4500,
+    "views": 150000
+  },
+  {
+    "id": 31,
+    "title": "Anime Smile",
+    "url": "https://media.giphy.com/media/13borq7Zo2kulO/giphy.gif",
+    "tags": ["anime", "cute"],
+    "likes": 6800,
+    "views": 265000
+  },
+  {
+    "id": 32,
+    "title": "Funny Laugh",
+    "url": "https://media.giphy.com/media/10JhviFuU2gWD6/giphy.gif",
+    "tags": ["funny", "laugh"],
+    "likes": 4100,
+    "views": 132000
+  },
+  {
+    "id": 33,
+    "title": "Hello Friend",
+    "url": "https://media.giphy.com/media/OkJat1YNdoD3W/giphy.gif",
+    "tags": ["hello", "cute"],
+    "likes": 3500,
+    "views": 105000
+  },
+  {
+    "id": 34,
+    "title": "Dog Smile",
+    "url": "https://media.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif",
+    "tags": ["dog", "happy"],
+    "likes": 5400,
+    "views": 175000
+  },
+  {
+    "id": 35,
+    "title": "Retro Neon",
+    "url": "https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif",
+    "tags": ["vintage", "retro"],
+    "likes": 2400,
+    "views": 70000
+  },
+  {
+    "id": 36,
+    "title": "Thinking Face",
+    "url": "https://media.giphy.com/media/d3mlE7uhX8KFgEmY/giphy.gif",
+    "tags": ["reaction", "thinking"],
+    "likes": 6200,
+    "views": 215000
+  },
+  {
+    "id": 37,
+    "title": "Party Time",
+    "url": "https://media.giphy.com/media/l0MYGb1LuZ3n7dRnO/giphy.gif",
+    "tags": ["party", "dance"],
+    "likes": 4700,
+    "views": 158000
+  },
+  {
+    "id": 38,
+    "title": "Cute Bunny",
+    "url": "https://media.giphy.com/media/l3q2K5jinAlChoCLS/giphy.gif",
+    "tags": ["cute", "bunny"],
+    "likes": 7300,
+    "views": 272000
+  },
+  {
+    "id": 39,
+    "title": "Kpop Idol",
+    "url": "https://media.giphy.com/media/26FPqAHtgCBzKG9mo/giphy.gif",
+    "tags": ["nmixx", "kpop"],
+    "likes": 6900,
+    "views": 281000
+  },
+  {
+    "id": 40,
+    "title": "Cool Cat",
+    "url": "https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif",
+    "tags": ["cat", "cool"],
+    "likes": 3800,
+    "views": 116000
+  },
+  {
+    "id": 41,
+    "title": "Oops",
+    "url": "https://media.giphy.com/media/3oEjHAUOqG3lSS0f1C/giphy.gif",
+    "tags": ["reaction", "oops"],
+    "likes": 5000,
+    "views": 168000
+  },
+  {
+    "id": 42,
+    "title": "Love You",
+    "url": "https://media.giphy.com/media/26ufcYAkp8e66vanu/giphy.gif",
+    "tags": ["love", "cute"],
+    "likes": 5700,
+    "views": 191000
+  },
+  {
+    "id": 43,
+    "title": "Dance Loop",
+    "url": "https://media.giphy.com/media/3o7TKsQ8UQ8mXzR5sc/giphy.gif",
+    "tags": ["dance", "loop"],
+    "likes": 4400,
+    "views": 143000
+  },
+  {
+    "id": 44,
+    "title": "Angry Meme",
+    "url": "https://media.giphy.com/media/l1J9EdzfOSgfyueLm/giphy.gif",
+    "tags": ["meme", "angry"],
+    "likes": 6100,
+    "views": 214000
+  },
+  {
+    "id": 45,
+    "title": "Sleep Mode",
+    "url": "https://media.giphy.com/media/3orieYJ5E6MBrv0YSI/giphy.gif",
+    "tags": ["sleep", "funny"],
+    "likes": 3100,
+    "views": 89000
+  },
+  {
+    "id": 46,
+    "title": "Big Laugh",
+    "url": "https://media.giphy.com/media/26tPplGWjN0xLybiU/giphy.gif",
+    "tags": ["laugh", "funny"],
+    "likes": 4900,
+    "views": 163000
+  },
+  {
+    "id": 47,
+    "title": "Surprised Pikachu",
+    "url": "https://media.giphy.com/media/6nWhy3ulBL7GSCvKw6/giphy.gif",
+    "tags": ["meme", "reaction"],
+    "likes": 9400,
+    "views": 480000
+  },
+  {
+    "id": 48,
+    "title": "Wave Hello",
+    "url": "https://media.giphy.com/media/xUPGcguWZHRC2HyBRS/giphy.gif",
+    "tags": ["hello", "wave"],
+    "likes": 3000,
+    "views": 82000
+  },
+  {
+    "id": 49,
+    "title": "Anime Cry",
+    "url": "https://media.giphy.com/media/l378zKVk7Eh3yHoJi/giphy.gif",
+    "tags": ["anime", "sad"],
+    "likes": 5600,
+    "views": 188000
+  },
+  {
+    "id": 50,
+    "title": "Cute Smile",
+    "url": "https://media.giphy.com/media/26BRzozg4TCBXv6QU/giphy.gif",
+    "tags": ["cute", "smile"],
+    "likes": 5200,
+    "views": 177000
+  },
+  {
+    "id": 51,
+    "title": "Thumbs Up Again",
+    "url": "https://media.giphy.com/media/111ebonMs90YLu/giphy.gif",
+    "tags": ["approve", "reaction"],
+    "likes": 2800,
+    "views": 77000
+  },
+  {
+    "id": 52,
+    "title": "Epic Fail",
+    "url": "https://media.giphy.com/media/l2JehQ2GitHGdVG9y/giphy.gif",
+    "tags": ["funny", "fail"],
+    "likes": 6500,
+    "views": 241000
+  },
+  {
+    "id": 53,
+    "title": "Good Morning",
+    "url": "https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif",
+    "tags": ["hello", "morning"],
+    "likes": 2700,
+    "views": 73000
+  },
+  {
+    "id": 54,
+    "title": "Dance Party",
+    "url": "https://media.giphy.com/media/l0MYC0LajbaPoEADu/giphy.gif",
+    "tags": ["dance", "party"],
+    "likes": 4600,
+    "views": 155000
+  },
+  {
+    "id": 55,
+    "title": "Final Meme",
+    "url": "https://media.giphy.com/media/QMHoU66sBXqqLqYvGO/giphy.gif",
+    "tags": ["meme", "funny"],
+    "likes": 8800,
+    "views": 401000
+  }
+] 

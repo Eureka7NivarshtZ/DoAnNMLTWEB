@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="Navbar">
+        <div class="Navbar-left">
+          <a href="/" class="Navbar-logo">
+            <img src="/image/download.png" class="logo" />
+          </a>
+        </div>
+        <div class="Navbar-center">
+          <div class="Searchbar">
+            <form action="" class="Searchbar-form">
+              <input
+                type="text"
+                class="inputSearch"
+                name="q"
+                placeholder="Tìm kiếm tag,ten gif...."
+              />
+            </form>
+          </div>
+        </div>
+        <div class="Navbar-right">
+          <div class="loginlogout-container">
+            <a href="/signin.html" class="Navbar-signin">Sign In</a>
+            <a href="/signup.html" class="Navbar-signup">Sign Up</a>
+          </div>
+        </div>
+      </div>
+    <section class="ContactPage">
+
+    <div class="ContactBox">
+
+      <h1>LIÊN HỆ</h1>
+
+      <form class="ContactForm" id="contactForm">
+
+        <div class="ContactGrid">
+
+            <div class="InputGroup">
+            <label>Tên:</label>
+            <input type="text" id="name" placeholder="Tên" required>
+            </div>
+
+            <div class="InputGroup">
+            <label>Số điện thoại:</label>
+            <input type="text" id="phone" placeholder="+84" required>
+            </div>
+
+            <div class="InputGroup">
+            <label>Email:</label>
+            <input type="email" id="email" placeholder="example@gmail.com" required>
+            </div>
+
+            <div class="InputGroup">
+            <label>Tiêu đề:</label>
+            <input type="text" id="subject" placeholder="Tiêu đề" required>
+            </div>
+
+        </div>
+
+        <div class="InputGroup full">
+            <label>Lời nhắn:</label>
+            <textarea id="message" placeholder="Lời nhắn"></textarea>
+        </div>
+
+        <button type="submit" class="ContactBtn">
+            Gửi lời nhắn
+        </button>
+            <div class="PopupOverlay" id="popup">
+            <div class="PopupModal">
+                <div class="PopupIcon" id="popupIcon">
+                ✅
+                </div>
+                <h2 id="popupTitle">
+                Thành công
+                </h2>
+                <p id="popupText">
+                Gửi liên hệ thành công 
+                </p>
+                <button id="popupBtn">
+                OK
+                </button>
+            </div>
+            </div>
+        </form>
+
+    </div>
+
+  </section>
+    <footer>
+      <div class="footer-content">
+        <p>© 2026 GifFinder · Explore endless GIFs</p>
+
+        <div class="footer-contact">
+          <a href="/contact.html">Liên hệ</a>
+          <a href="mailto:support@giffinder.com">support@giffinder.com</a>
+          <a href="tel:+84123456789">+84 123 456 789</a>
+          <a href="#">Discord</a>
+        </div>
+      </div>
+    </footer>
+    <button id="scrollTopBtn">↑</button> 
+    <script src="/contact.js"></script>
+  </body>
+
+</html>

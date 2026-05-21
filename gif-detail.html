@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GIF Detail – GifFinder</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" />
+  </head>
+  <body>
+    <!-- NAVBAR (same as index) -->
+    <div class="Navbar">
+      <div class="Navbar-left">
+        <a href="/" class="Navbar-logo">
+          <img src="/image/download.png" class="logo" />
+        </a>
+      </div>
+      <div class="Navbar-center">
+        <div class="Searchbar">
+          <form action="" class="Searchbar-form">
+            <input type="text" class="inputSearch" name="q" placeholder="Tìm kiếm tag, tên gif...." />
+          </form>
+        </div>
+      </div>
+      <div class="Navbar-right">
+        <button id="themeToggle" class="ThemeToggle">🌙</button>
+        <div class="loginlogout-container">
+          <a href="/signin.html" class="Navbar-signin">Sign In</a>
+          <a href="/signup.html" class="Navbar-signup">Sign Up</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- DETAIL LAYOUT -->
+    <div class="DetailPage">
+
+      <!-- LEFT: GIF + vote -->
+      <div class="GifViewer">
+        <img
+          id="detailGifImg"
+          class="GifViewer-media"
+          src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif"
+          alt="GIF"
+        />
+
+        <div class="GifViewer-actions">
+          <button class="VoteBtn" id="upvoteBtn">▲ <span id="upCount">1,194</span></button>
+          <span class="VoteCount" id="voteDisplay">1,194</span>
+          <button class="VoteBtn" id="downvoteBtn">▼</button>
+          <button class="ActionBtn" id="heartBtn">♡ Like</button>
+          <button class="ActionBtn" id="shareBtn">↗ Share</button>
+        </div>
+      </div>
+
+      <!-- RIGHT: info + comments -->
+      <div class="GifInfo">
+
+        <!-- Author -->
+        <div class="AuthorCard">
+          <div class="AuthorCard-avatar" id="authorAvatar">T</div>
+          <div>
+            <div class="AuthorCard-name" id="authorName">tahjprice</div>
+            <div class="AuthorCard-meta" id="gifTime">14h ago · via Android</div>
+          </div>
+          <button class="FollowBtn" id="followBtn">+ Follow</button>
+        </div>
+
+        <!-- Title -->
+        <div class="GifInfo-title" id="gifTitle">Such a beautiful memory to hold on to.</div>
+
+        <!-- Tags -->
+        <div class="GifInfo-tags" id="gifTags">
+          <span class="GifCard-tag">#funny</span>
+          <span class="GifCard-tag">#cat</span>
+          <span class="GifCard-tag">#cute</span>
+        </div>
+
+        <!-- Stats -->
+        <div class="GifInfo-stats">
+          <div class="Stat">
+            <span class="Stat-value" id="statViews">23,773</span>
+            <span class="Stat-label">👁 Views</span>
+          </div>
+          <div class="Stat">
+            <span class="Stat-value" id="statLikes">1,194</span>
+            <span class="Stat-label">❤️ Likes</span>
+          </div>
+          <div class="Stat">
+            <span class="Stat-value" id="statComments">76</span>
+            <span class="Stat-label">💬 Comments</span>
+          </div>
+        </div>
+
+        <!-- Share / Download -->
+        <div class="GifInfo-shareRow">
+          <button class="ShareBtn primary" id="copyLinkBtn">🔗 Copy Link</button>
+          <button class="ShareBtn secondary" id="downloadBtn">⬇ Download</button>
+        </div>
+
+        <!-- Comments -->
+        <div class="Comments">
+          <div class="Comments-header">
+            Comments <span class="Comments-count" id="commentCountBadge">76</span>
+          </div>
+
+          <div class="CommentInput-wrap">
+            <div class="CommentInput-avatar">👤</div>
+            <textarea class="CommentInput" id="commentInput" placeholder="Viết bình luận..."></textarea>
+          </div>
+
+          <div class="CommentList" id="commentList">
+            <!-- populated by JS -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RELATED GIFS -->
+    <div class="RelatedSection">
+      <div class="RelatedSection-title">Related GIFs</div>
+      <div class="GifGrid" id="relatedGrid"></div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <p>© 2026 GifFinder · Explore endless GIFs</p>
+        <div class="footer-contact">
+          <a href="/contact.html">Liên hệ</a>
+          <a href="mailto:support@giffinder.com">support@giffinder.com</a>
+          <a href="#">Discord</a>
+        </div>
+      </div>
+    </footer>
+
+    <button id="scrollTopBtn">↑</button>
+
+    <script>
+    // ── Theme toggle ──
+    const toggleBtn = document.getElementById("themeToggle");
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark");
+      toggleBtn.textContent = "☀️";
+    }
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      const isDark = document.body.classList.contains("dark");
+      localStorage.setItem("theme", isDark ? "dark" : "light");
+      toggleBtn.textContent = isDark ? "☀️" : "🌙";
+    });
+
+    // ── Scroll top btn ──
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    window.addEventListener("scroll", () => {
+      scrollTopBtn.classList.toggle("show", window.pageYOffset > 300);
+    });
+    scrollTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+
+    // ── Footer hide on scroll ──
+    const footer = document.querySelector("footer");
+    window.addEventListener("scroll", () => {
+      footer.classList.toggle("hidden", window.pageYOffset > 10);
+    });
+
+    // ── Load GIF data from URL param or gif.json ──
+    const params = new URLSearchParams(location.search);
+    const gifId = params.get("id");
+
+    async function loadGif() {
+      let gif = null;
+      try {
+        const res = await fetch("/gif.json");
+        const all = await res.json();
+        if (gifId) {
+          gif = all.find(g => String(g.id) === gifId) || all[0];
+        } else {
+          gif = all[0];
+        }
+        populatePage(gif);
+        renderRelated(all.filter(g => g.id !== gif.id).slice(0, 8));
+      } catch {
+        // fallback: keep placeholder content
+        renderSampleComments();
+      }
+    }
+
+    function populatePage(gif) {
+      document.getElementById("detailGifImg").src = gif.url;
+      document.getElementById("detailGifImg").alt = gif.title;
+      document.getElementById("gifTitle").textContent = gif.title || "Untitled GIF";
+      document.getElementById("authorName").textContent = gif.author || "anonymous";
+      document.getElementById("authorAvatar").textContent = (gif.author || "A")[0].toUpperCase();
+      document.getElementById("statViews").textContent = Number(gif.views || 0).toLocaleString();
+      document.getElementById("statLikes").textContent = Number(gif.likes || 0).toLocaleString();
+      document.getElementById("upCount").textContent = Number(gif.likes || 0).toLocaleString();
+      document.getElementById("voteDisplay").textContent = Number(gif.likes || 0).toLocaleString();
+
+      const tagsEl = document.getElementById("gifTags");
+      tagsEl.innerHTML = (gif.tags || []).map(t => `<span class="GifCard-tag">#${t}</span>`).join("");
+
+      document.title = `${gif.title} – GifFinder`;
+      renderSampleComments();
+    }
+
+    function renderRelated(gifs) {
+      const grid = document.getElementById("relatedGrid");
+      grid.innerHTML = "";
+      gifs.forEach(gif => {
+        const card = document.createElement("div");
+        card.className = "GifCard";
+        card.style.cursor = "pointer";
+        card.innerHTML = `
+          <img class="GifCard-media" src="${gif.url}" alt="${gif.title}" />
+          <div class="GifCard-body">
+            <div class="GifCard-title">${gif.title}</div>
+            <div class="GifCard-tags">${(gif.tags||[]).map(t=>`<span class="GifCard-tag">#${t}</span>`).join("")}</div>
+            <div class="GifCard-meta"><span>${gif.likes} ❤️</span><span>${gif.views} 👁</span></div>
+          </div>`;
+        card.addEventListener("click", () => {
+          location.href = `gif-detail.html?id=${gif.id}`;
+        });
+        grid.appendChild(card);
+      });
+    }
+
+    const sampleComments = [
+      { name: "am@ustpuppasetoputionsense", time: "14h ago", text: "This is so wholesome 😭❤️", avatar: "A" },
+      { name: "pixel_ghost", time: "13h ago", text: "Tekken 3 was the absolute GOAT. Your dad has impeccable taste.", avatar: "P" },
+      { name: "neon_ramen", time: "11h ago", text: "crying at 2am reading this, thank you for sharing 🙏", avatar: "N" },
+      { name: "cloudwave99", time: "9h ago", text: "The way he said you weren't going to school 💀💀", avatar: "C" },
+      { name: "mochi_drift", time: "6h ago", text: "Real ones know Tekken 3 was worth missing school for.", avatar: "M" },
+    ];
+
+    function renderSampleComments() {
+      const list = document.getElementById("commentList");
+      list.innerHTML = sampleComments.map(c => `
+        <div class="Comment">
+          <div class="Comment-avatar">${c.avatar}</div>
+          <div class="Comment-body">
+            <div class="Comment-meta">
+              <span class="Comment-name">${c.name}</span>
+              <span class="Comment-time">${c.time}</span>
+            </div>
+            <div class="Comment-text">${c.text}</div>
+            <div class="Comment-actions">
+              <button class="Comment-action" onclick="this.textContent=this.textContent.includes('👍')?'👍 Like':'👍 Like (1)'">👍 Like</button>
+              <button class="Comment-action">↩ Reply</button>
+            </div>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    loadGif();
+
+    // ── Vote ──
+    let votes = 1194;
+    let voted = null;
+    document.getElementById("upvoteBtn").addEventListener("click", () => {
+      if (voted === "up") { votes--; voted = null; }
+      else { if (voted === "down") votes++; votes++; voted = "up"; }
+      document.getElementById("upCount").textContent = votes.toLocaleString();
+      document.getElementById("voteDisplay").textContent = votes.toLocaleString();
+      document.getElementById("statLikes").textContent = votes.toLocaleString();
+      document.getElementById("upvoteBtn").classList.toggle("active-up", voted === "up");
+      document.getElementById("downvoteBtn").classList.toggle("active-down", voted === "down");
+    });
+    document.getElementById("downvoteBtn").addEventListener("click", () => {
+      if (voted === "down") { votes++; voted = null; }
+      else { if (voted === "up") votes--; votes--; voted = "down"; }
+      document.getElementById("upCount").textContent = votes.toLocaleString();
+      document.getElementById("voteDisplay").textContent = votes.toLocaleString();
+      document.getElementById("statLikes").textContent = votes.toLocaleString();
+      document.getElementById("upvoteBtn").classList.toggle("active-up", voted === "up");
+      document.getElementById("downvoteBtn").classList.toggle("active-down", voted === "down");
+    });
+
+    // ── Heart ──
+    const heartBtn = document.getElementById("heartBtn");
+    let hearted = false;
+    heartBtn.addEventListener("click", () => {
+      hearted = !hearted;
+      heartBtn.textContent = hearted ? "❤️ Liked" : "♡ Like";
+      heartBtn.classList.toggle("copied", hearted);
+    });
+
+    // ── Follow ──
+    const followBtn = document.getElementById("followBtn");
+    followBtn.addEventListener("click", () => {
+      followBtn.classList.toggle("following");
+      followBtn.textContent = followBtn.classList.contains("following") ? "✓ Following" : "+ Follow";
+    });
+
+    // ── Copy link ──
+    document.getElementById("copyLinkBtn").addEventListener("click", () => {
+      navigator.clipboard.writeText(location.href).catch(()=>{});
+      const btn = document.getElementById("copyLinkBtn");
+      btn.textContent = "✓ Copied!";
+      setTimeout(() => btn.textContent = "🔗 Copy Link", 2000);
+    });
+
+    // ── Download ──
+    document.getElementById("downloadBtn").addEventListener("click", () => {
+      const src = document.getElementById("detailGifImg").src;
+      const a = document.createElement("a");
+      a.href = src; a.download = "gif.gif"; a.click();
+    });
+
+    // ── Share ──
+    document.getElementById("shareBtn").addEventListener("click", () => {
+      if (navigator.share) {
+        navigator.share({ title: document.title, url: location.href });
+      } else {
+        navigator.clipboard.writeText(location.href).catch(()=>{});
+        alert("Link copied!");
+      }
+    });
+
+    // ── Comment input submit on Enter ──
+    document.getElementById("commentInput").addEventListener("keydown", (e) => {
+      if (e.key === "Enter" && !e.shiftKey) {
+        e.preventDefault();
+        const text = e.target.value.trim();
+        if (!text) return;
+        const list = document.getElementById("commentList");
+        const div = document.createElement("div");
+        div.className = "Comment";
+        div.innerHTML = `
+          <div class="Comment-avatar">👤</div>
+          <div class="Comment-body">
+            <div class="Comment-meta">
+              <span class="Comment-name">Bạn</span>
+              <span class="Comment-time">vừa xong</span>
+            </div>
+            <div class="Comment-text">${text}</div>
+            <div class="Comment-actions">
+              <button class="Comment-action">👍 Like</button>
+              <button class="Comment-action">↩ Reply</button>
+            </div>
+          </div>`;
+        list.prepend(div);
+        e.target.value = "";
+        const count = parseInt(document.getElementById("commentCountBadge").textContent) + 1;
+        document.getElementById("commentCountBadge").textContent = count;
+        document.getElementById("statComments").textContent = count;
+      }
+    });
+    </script>
+  </body>
+</html>
